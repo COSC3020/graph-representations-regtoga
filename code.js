@@ -1,9 +1,15 @@
 function convertToAdjList(adjMatrix) {
+    //make a new adjacency list the same length as the matrix
     const adjlist = new Array(adjMatrix.length);
+    //for each row
     for (let i = 0; i < adjMatrix.length; i++) {
+        //make a new list to store connections
         adjlist[i] = [];
+        //for each item in the column
         for (let j = 0; j < adjMatrix[i].length; j++){
+            //check if the connection exists
             if (adjMatrix[i][j] == 1) {
+                //if so push that value to the list
                 (adjlist[i]).push(j);
             }
             
@@ -12,47 +18,3 @@ function convertToAdjList(adjMatrix) {
 
     return adjlist;
 }
-
-
-var AdjMatrix1 = [
-    [0,1,0,1,0],
-    [1,0,1,1,0],
-    [0,1,0,0,1],
-    [1,1,0,0,1],
-    [0,0,1,1,0]
-]
-
-var answer1 = [
-    [2,4],
-    [1,3,4],
-    [2,5],
-    [1,2,5],
-    [3,4]
-]
-
-var AdjMatrix2 = [
-    [0,1,0,0,0],
-    [0,0,0,1,0],
-    [1,1,0,0,0],
-    [1,0,0,0,1],
-    [0,0,1,0,0]
-]
-
-var answer2 = [
-    [2],
-    [4],
-    [1,2],
-    [1,5],
-    [3]
-]
-
-
-console.log(convertToAdjList([[0,0]]));
-
-ans1 = convertToAdjList(AdjMatrix1);
-console.log(ans1)
-console.log(JSON.stringify(ans1) === JSON.stringify(answer1))
-
-ans2 = convertToAdjList(AdjMatrix2);
-console.log(ans2)
-console.log(JSON.stringify(ans2) === JSON.stringify(answer2))
