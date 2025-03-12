@@ -52,6 +52,3 @@ function convertToAdjList(adjMatrix) {
 
     return step3;
 }
-
-//convertToAdjList([[1,0],[0,1]])
-//console.log()
