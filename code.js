@@ -1,4 +1,9 @@
 function convertToAdjListog(adjMatrix) {
+    //The name is convert to adj List og (og is slang for original)
+    //i changed the name so that i could use your test code to prove that my code works bi-directionally
+    //without changing anything about the test code. thats why the test code now runs the newconvert to
+    //adj list function that uses this function twice to do the same job its like this x''' = x' because two of the nots cancel
+
     //make a new adjacency list the same length as the matrix
     const adjlist = new Array(adjMatrix.length);
     //for each row
